@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.inputClasses {
+  @apply w-full h-12 rounded-md border-[2px] text-black px-4 active:outline-none focus-visible:outline-red-500 outline-none focus-visible:border-transparent duration-300;
+}
+
+.areaClass {
+  @apply w-full rounded-md border-[2px]  text-black px-4 py-2 active:outline-none focus-visible:outline-red-500 outline-none focus-visible:border-transparent duration-300 resize-none;
+}

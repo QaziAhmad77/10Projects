@@ -1,11 +1,11 @@
-import React from 'react'
+import MainPage from './Pages/MainPage';
 
 const App = () => {
   return (
-    <div>
-      <h1 className='text-3xl text-red-500'>It's Working</h1>
-    </div>
-  )
-}
+    <>
+      <MainPage />
+    </>
+  );
+};
 
-export default App
+export default App;

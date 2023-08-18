@@ -28,8 +28,12 @@ const Body = () => {
           </div>
         </div>
       </div>
-      <div className="sml:w-1/2 w-full flex items-center">
-        <img className="w-full" src={shoe_image} alt="" />
+      <div className="sml:w-1/2 w-full flex items-center overflow-hidden">
+        <img
+          className="w-full hover:rotate-[30deg] duration-300 "
+          src={shoe_image}
+          alt=""
+        />
       </div>
     </div>
   );

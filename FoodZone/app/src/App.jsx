@@ -30,37 +30,45 @@ const App = () => {
   useEffect(() => {
     fetchFoodData();
   }, []);
+
   const searchFood = (e) => {
     const searchValue = e.target.value;
-    if (searchValue === '') {
-      setFilterData(null);
-    }
+    // if (searchValue === '') {
+    //   setFilterData(null);
+    // }
     const filter = data?.filter((food) =>
       food.name.toLowerCase().includes(searchValue.toLowerCase())
     );
     setFilterData(filter);
   };
+
   const filterFood = (type) => {
     if (type === 'all') {
       setFilterData(data);
       setSelectedBtn('all');
       return;
     }
+    //else
     const filter = data?.filter((food) =>
       food.type.toLowerCase().includes(type.toLowerCase())
     );
     setFilterData(filter);
     setSelectedBtn(type);
   };
+  
   if (error) return <div>{error}</div>;
   if (loading) return <div>Loading.....</div>;
 
   return (
     <>
       <Container>
-        <Top searchFood={searchFood} filterFood={filterFood} selectedBtn={selectedBtn} />
+        <Top
+          searchFood={searchFood}
+          filterFood={filterFood}
+          selectedBtn={selectedBtn}
+        />
       </Container>
-      <Cards data={fileterData} />
+      <Cards fileterData={fileterData} />
     </>
   );
 };

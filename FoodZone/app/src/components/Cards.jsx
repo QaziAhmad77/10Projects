@@ -3,12 +3,12 @@ import { background } from '../../public';
 import { BASE_URL, Container } from './../App';
 import { Button } from './Top';
 
-const Cards = ({ data }) => {
+const Cards = ({ fileterData }) => {
   return (
     <FoodCardContainer>
       <Container>
         <FoodCards>
-          {data?.map(({ name, image, text, price }) => (
+          {fileterData?.map(({ name, image, text, price }) => (
             <FoodCard key={name}>
               <div className="food_image">
                 <img src={BASE_URL + image} alt="" />
